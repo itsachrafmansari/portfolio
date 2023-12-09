@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Achraf Mansari</title>
+        <style>
+            header nav ul li:hover::after {
+                width: 100%;
+            }
+            header nav ul li::after {
+                content: '';
+                position: absolute;
+                height: 1px;
+                width: 0%;
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+                transition-duration: 200ms;
+                background: linear-gradient(90deg, rgba(255, 255, 255, 0) 10%, rgba(189, 255, 255, 0.8) 50%, rgba(255, 255, 255, 0) 90%);
+            }
+        </style>
+        <script src="./tailwindcss.js"></script>
+    </head>
+    <body class=" bg-gray-800">
+
+        <header class="h-screen flex flex-col">
+
+            <nav class="w-full">
+                <ul class="h-16 flex justify-center items-center gap-4 uppercase font-semibold text-sm md:text-lg text-cyan-200">
+                    <li class="px-2 pb-1 relative transition-all duration-200 hover:text-cyan-100"><a href="">About</a></li>
+                    <li class="px-2 pb-1 relative transition-all duration-200 hover:text-cyan-100"><a href="">Events</a></li>
+                    <li class="px-2 pb-1 relative transition-all duration-200 hover:text-cyan-100"><a href="">Press & TV</a></li>
+                    <li class="px-2 pb-1 relative transition-all duration-200 hover:text-cyan-100"><a href="">Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="w-full h-full px-1 md:px-5 lg:px-14 2xl:px-32 grow flex flex-col-reverse xl:flex-row justify-end">
+
+                <div class="w-full xl:w-1/2 min-h-fit py-5 px-4 xl:px-10 flex flex-col justify-center text-center xl:text-left ">
+                    <h1 class="mb-2 uppercase font-bold text-4xl md:text-5xl xl:text-7xl text-cyan-300">Achraf Mansari</h1>
+                    <h4 class="mb-6 xl:mb-10 capitalize text-xl xl:text-2xl text-cyan-200">3D Modeler | Computer Scientist</h4>
+                    <div class="mb-10 xl:mb-16 text-sm md:text-md xl:text-xl text-cyan-100">I am a Computer Science student with a passion for coding and robotics. I have extensive experience in Python and its frameworks Flask and Django, having done multiple projects using them. My expertise in robotics involves the use of Arduino and Raspberry Pi microcomputer, allowing me to create innovative solutions for a variety of problems. In addition to coding, I also do 3D modeling in general, with a focus on architectural design. My goal is to combine my knowledge of coding and robotics to create groundbreaking solutions that can revolutionize the way we interact with technology. I am always looking for new challenges and opportunities to expand my skillset and push the boundaries of what is possible.</div>
+                    <div class="buttons flex justify-center xl:justify-start gap-4">
+                        <a href="#" class="px-8 py-2 block transition-all duration-200 text-center text-white hover:text-orange-500 rounded-lg border border-orange-500 bg-orange-500 hover:bg-white">Demo</a>
+                        <a href="#" class="px-8 py-2 block transition-all duration-200 text-center text-white hover:text-orange-500 rounded-lg border border-orange-500 bg-orange-500 hover:bg-white">Demo</a>
+                    </div>
+                </div>
+
+                <div class="w-full xl:w-1/2 py-5 px-4 xl:px-10 grow flex justify-center items-center ">
+                    <div id="portrait_container" class="h-56 sm:h-80 md:h-96 xl:h-auto xl:w-full aspect-square overflow-hidden bg-black/0"></div>
+                </div>
+
+            </div>
+
+        </header>
+
+        <main>
+
+            <section class="max-w-[1600px] mx-auto pt-12">
+
+                <div class="pt-6 pb-12 w-full text-center">
+                    <h1 class="mb-3 font-semibold text-2xl md:text-4xl text-orange-500">3D Modeling Projects</h1>
+                    <h4 class="mb-3 text-md md:text-lg text-white">This is a test of a section title description</h4>
+                    <div class="w-64 h-0.5 mx-auto bg-gradient-to-r from-transparent via-orange-500"></div>
+                </div>
+
+                <div id="designs" class="flex flex-wrap flex-row justify-center gap-4"></div>
+
+                <div class="py-8 mb-14">
+                    <button onclick="show_more()" id="designsShowMorBbutton" class="px-4 py-2 w-36 mx-auto block transition-all duration-200 text-center text-orange-500 hover:text-white rounded-lg border border-orange-500 bg-transparent hover:bg-orange-500">Show more</button>
+                </div>
+
+            </section>
+
+            <section id="projects" class="max-w-[1600px] mx-auto">
+
+                <div class="pt-6 pb-12 w-full text-center">
+                    <h1 class="mb-3 font-semibold text-4xl text-orange-500">Web & Software projects</h1>
+                    <h4 class="mb-3 text-lg text-white">This is a test of a section title description</h4>
+                    <div class="w-64 h-0.5 mx-auto bg-gradient-to-r from-transparent via-orange-500">.</div>
+                </div>
+                <div class="space-y-20 lg:space-y-10">
+                    <div class="w-full px-10 sm:px-16 lg:px-32 group flex flex-col items-center text-center lg:text-left lg:odd:flex-row lg:even:flex-row-reverse">
+                        <div class="w-3/4 lg:w-2/5 mb-6 lg:mb-0 grow aspect-video rounded-lg bg-red-500"></div>
+                        <div class="w-full lg:w-3/5 my-auto lg:group-odd:pl-8 lg:group-even:pr-8">
+                            <h2 class="mb-4 font-semibold text-3xl text-cyan-100">This is a project's title</h2>
+                            <div class="mb-4 font-light text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</div>
+                            
+                            <div class="mb-4 flex text-white gap-4 justify-center lg:justify-start">
+                                <span>Techs used :</span>
+                                <div class="w-7 h-7"><img src="./icons/facebook.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/instagram.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/twitter.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/linkedin.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/youtube.svg" alt="-"></div>
+                            </div>
+                            <div class="py-2 flex gap-4 justify-center lg:justify-start">
+                                <a href="#" class="px-4 py-2 w-36 block transition-all duration-200 text-center hover:text-white rounded-lg border border-white bg-white hover:bg-transparent">Show more</a>
+                                <a href="#" class="px-4 py-2 w-36 block transition-all duration-200 text-center hover:text-white rounded-lg border border-white bg-white hover:bg-transparent">Show more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-10 sm:px-16 lg:px-32 group flex flex-col items-center text-center lg:text-left lg:odd:flex-row lg:even:flex-row-reverse">
+                        <div class="w-3/4 lg:w-2/5 mb-6 lg:mb-0 grow aspect-video rounded-lg bg-red-500"></div>
+                        <div class="w-full lg:w-3/5 my-auto lg:group-odd:pl-8 lg:group-even:pr-8">
+                            <h2 class="mb-4 font-semibold text-3xl text-cyan-100">This is a project's title</h2>
+                            <div class="mb-4 font-light text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</div>
+                            
+                            <div class="mb-4 flex text-white gap-4 justify-center lg:justify-start">
+                                <span>Techs used :</span>
+                                <div class="w-7 h-7"><img src="./icons/facebook.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/instagram.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/twitter.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/linkedin.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/youtube.svg" alt="-"></div>
+                            </div>
+                            <div class="py-2 flex gap-4 justify-center lg:justify-start">
+                                <a href="#" class="px-4 py-2 w-36 block transition-all duration-200 text-center hover:text-white rounded-lg border border-white bg-white hover:bg-transparent">Show more</a>
+                                <a href="#" class="px-4 py-2 w-36 block transition-all duration-200 text-center hover:text-white rounded-lg border border-white bg-white hover:bg-transparent">Show more</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-full px-10 sm:px-16 lg:px-32 group flex flex-col items-center text-center lg:text-left lg:odd:flex-row lg:even:flex-row-reverse">
+                        <div class="w-3/4 lg:w-2/5 mb-6 lg:mb-0 grow aspect-video rounded-lg bg-red-500"></div>
+                        <div class="w-full lg:w-3/5 my-auto lg:group-odd:pl-8 lg:group-even:pr-8">
+                            <h2 class="mb-4 font-semibold text-3xl text-cyan-100">This is a project's title</h2>
+                            <div class="mb-4 font-light text-white">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</div>
+                            
+                            <div class="mb-4 flex text-white gap-4 justify-center lg:justify-start">
+                                <span>Techs used :</span>
+                                <div class="w-7 h-7"><img src="./icons/facebook.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/instagram.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/twitter.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/linkedin.svg" alt="-"></div>
+                                <div class="w-7 h-7"><img src="./icons/youtube.svg" alt="-"></div>
+                            </div>
+                            <div class="py-2 flex gap-4 justify-center lg:justify-start">
+                                <a href="#" class="px-4 py-2 w-36 block transition-all duration-200 text-center hover:text-white rounded-lg border border-white bg-white hover:bg-transparent">Show more</a>
+                                <a href="#" class="px-4 py-2 w-36 block transition-all duration-200 text-center hover:text-white rounded-lg border border-white bg-white hover:bg-transparent">Show more</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="py-8 mb-14">
+                    <a href="#" class="px-4 py-2 w-36 mx-auto block transition-all duration-200 text-center text-orange-500 hover:text-white rounded-lg border border-orange-500 bg-transparent hover:bg-orange-500">Show more</a>
+                </div>
+            </section>
+
+        </main>
+
+        <footer class="w-full py-4 px-20 md:px-48 lg:px-62 flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0 bg-black text-white">
+            <div class="flex items-center gap-1 font-bold">
+                <div class="flex flex-col"><span>Achraf</span><span>Mansari</span></div>
+                <div><img class="w-10 h-10" src="./icons/hamzah_logo_transparent.png"></div>
+                <div class="flex flex-col items-end"><span>اشرف</span><span>منصاري</span></div>
+            </div>
+            <div class="flex gap-2">
+                <a href="#" class="w-7 h-7"><img src="./icons/facebook.svg"></a>
+                <a href="#" class="w-7 h-7"><img src="./icons/instagram.svg"></a>
+                <a href="#" class="w-7 h-7"><img src="./icons/twitter.svg"></a>
+                <a href="#" class="w-7 h-7"><img src="./icons/linkedin.svg"></a>
+                <a href="#" class="w-7 h-7"><img src="./icons/youtube.svg"></a>
+            </div>
+        </footer>
+
+        <script async src="https://unpkg.com/es-module-shims@1.6.3/dist/es-module-shims.js"></script>
+        <script type="importmap" >
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.150.1/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.150.1/examples/jsm/"
+            }
+        }
+        </script>
+        <script type="module" src="three.js"></script>
+        <script src="./show_more.js"></script>
+    </body>
+</html>
